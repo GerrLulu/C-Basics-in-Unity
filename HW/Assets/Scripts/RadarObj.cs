@@ -5,7 +5,7 @@ namespace Geekbrains
 {
     public sealed class RadarObj : MonoBehaviour
     {
-        [SerializeField] private Image _ico;
+        private Image _ico;
 
         private void OnValidate()
         {

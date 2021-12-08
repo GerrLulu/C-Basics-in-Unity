@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 namespace Geekbrains
 {
-    public sealed class Radar : MonoBehaviour
+    public sealed class Radar : MonoBehaviour, IExecute
     {
         private Transform _playerPos;
         private readonly float _mapScale = 2;
@@ -51,18 +51,12 @@ namespace Geekbrains
             }
         }
 
-        private void Update()
+        public void Execute()
         {
             if (Time.frameCount % 2 == 0)
             {
                 DrawRadarDots();
             }
         }
-    }
-
-    public sealed class RadarObject
-    {
-        public Image Icon;
-        public GameObject Owner;
     }
 }
